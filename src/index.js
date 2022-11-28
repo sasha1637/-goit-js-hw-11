@@ -26,7 +26,6 @@ function onSearchQuery(evt) {
         Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.")
       }
       refs.gallery.insertAdjacentHTML('beforeend', createMarkup(data.hits))
-      console.log(simpleLightbox);
       simpleLightbox.refresh()
       Notiflix.Notify.info(`"Hooray! We found ${data.totalHits} images."`)
       observer.observe(refs.target);
