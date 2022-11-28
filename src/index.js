@@ -12,7 +12,6 @@ const options = {
   threshold: 1
 }
 const simpleLightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, showCounter: false, captionsData: 'alt' })
-
 const observer = new IntersectionObserver(onLoad, options);
 refs.searchInput.addEventListener("submit", onSearchQuery);
 
@@ -54,7 +53,6 @@ function onLoad(entries, observer) {
     }
   })
 }
-
 function scrollBy() {
   const { height: cardHeight } = refs.gallery
     .firstElementChild.getBoundingClientRect();
