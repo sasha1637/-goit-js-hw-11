@@ -4,11 +4,11 @@ import Notiflix from 'notiflix';
 import createMarkup from './js/createMarkup'
 import imageApi from './js/api'
 import refs from './js/refs'
-let page = 1;
+let page
 let searchQuery = ''
 const options = {
   root: null,
-  rootMargin: '500px',
+  rootMargin: '700px',
   threshold: 1
 }
 const simpleLightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, showCounter: false, captionsData: 'alt' })
@@ -17,6 +17,7 @@ refs.searchInput.addEventListener("submit", onSearchQuery);
 
 function onSearchQuery(evt) {
   evt.preventDefault();
+  page=1
    refs.gallery.innerHTML=''
   searchQuery = evt.currentTarget.elements.searchQuery.value
 
